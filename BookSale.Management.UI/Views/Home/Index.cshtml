@@ -1,0 +1,77 @@
+﻿@model IEnumerable<BookSale.Management.Application.DTOs.Book.BookDto>
+@using BookSale.Management.UI.Resources;
+@using Microsoft.Extensions.Localization;
+@inject IStringLocalizer<Resource> _localizer;
+
+@using System.Globalization;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link href="~/lib/splide.min.css" rel="stylesheet" />
+
+<div class="row">
+    <div class="col-12">
+        <div class="text-center">
+            <h5 class="display-4">@_localizer["Welcome"]</h5>
+            <div class="mt-5">
+                <section class="splide" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            @{
+                                foreach (var book in Model)
+                                {
+                                    <li class="splide__slide">
+                                        <div class="col-12  mb-2">
+                                            <div class="product" style="width:300px;">
+                                                <div class="product__thumb">
+                                                    <a class="first__img" href="#">
+                                                        <img src="~/images/book/@(book.Id).png" alt="book image" height="300" class="img-book">
+                                                    </a>
+                                                    <span class="hot-label">BEST SALLER</span>
+                                                </div>
+                                                <div class="product__content mt-2">
+                                                    <div class="product__title">
+                                                        <h6>@book.Title</h6>
+                                                    </div>
+                                                    <ul class="prize d-flex">
+                                                        <li class="orig">@book.Cost.ToString("C", CultureInfo.GetCultureInfo("vi-VN"))</li>
+                                                    </ul>
+                                                    <div class="action">
+                                                        <div class="actions_inner">
+                                                            <ul class="add_to_links d-flex">
+                                                                <li><a class="cart"  href="#"><i class="fa fa-eye"></i></a></li>
+                                                                <li><a class="wishlist btn-add-cart" data-code="@book.Cost.ToString("C", CultureInfo.GetCultureInfo("vi-VN"))" href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script src="~/lib/splide.min.js"></script>
+    <script>
+        $(function () {
+            var splide = new Splide('.splide', {
+                autoHeight: true,
+                focus: 0,
+                rewind: true,
+                perPage: 4,
+            });
+            splide.mount();
+        });
+    </script>
+}
