@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSale.Management.Domain"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSale.Management.Application", "BookSale.Management.Application\BookSale.Management.Application.csproj", "{32E74365-22A8-4618-B712-3713D8381010}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSale.Management.Infrastruture", "BookSale.Management.Infrastruture\BookSale.Management.Infrastruture.csproj", "{B8C5B901-002A-40F1-A132-CC880270191F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSale.Management.Infrastructure", "BookSale.Management.Infrastructure\BookSale.Management.Infrastructure.csproj", "{B8C5B901-002A-40F1-A132-CC880270191F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSale.Management.DataAccess", "BookSale.Management.DataAccess\BookSale.Management.DataAccess.csproj", "{C4E83D8A-E5D2-4B1F-8A31-1D5AA1A03278}"
 EndProject

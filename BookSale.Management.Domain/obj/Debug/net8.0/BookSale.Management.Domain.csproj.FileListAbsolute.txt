@@ -1,0 +1,13 @@
+/app/BookSale.Management.Domain/bin/Debug/net8.0/BookSale.Management.Domain.deps.json
+/app/BookSale.Management.Domain/bin/Debug/net8.0/BookSale.Management.Domain.dll
+/app/BookSale.Management.Domain/bin/Debug/net8.0/BookSale.Management.Domain.pdb
+/app/BookSale.Management.Domain/obj/Debug/net8.0/BookSale.Management.Domain.csproj.AssemblyReference.cache
+/app/BookSale.Management.Domain/obj/Debug/net8.0/BookSale.Management.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/app/BookSale.Management.Domain/obj/Debug/net8.0/BookSale.Management.Domain.AssemblyInfoInputs.cache
+/app/BookSale.Management.Domain/obj/Debug/net8.0/BookSale.Management.Domain.AssemblyInfo.cs
+/app/BookSale.Management.Domain/obj/Debug/net8.0/BookSale.Management.Domain.csproj.CoreCompileInputs.cache
+/app/BookSale.Management.Domain/obj/Debug/net8.0/BookSale.Management.Domain.sourcelink.json
+/app/BookSale.Management.Domain/obj/Debug/net8.0/BookSale.Management.Domain.dll
+/app/BookSale.Management.Domain/obj/Debug/net8.0/refint/BookSale.Management.Domain.dll
+/app/BookSale.Management.Domain/obj/Debug/net8.0/BookSale.Management.Domain.pdb
+/app/BookSale.Management.Domain/obj/Debug/net8.0/ref/BookSale.Management.Domain.dll

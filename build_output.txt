@@ -1,0 +1,13 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  BookSale.Management.Domain -> /app/BookSale.Management.Domain/bin/Debug/net8.0/BookSale.Management.Domain.dll
+  BookSale.Management.DataAccess -> /app/BookSale.Management.DataAccess/bin/Debug/net8.0/BookSale.Management.DataAccess.dll
+  BookSale.Management.Application -> /app/BookSale.Management.Application/bin/Debug/net8.0/BookSale.Management.Application.dll
+  BookSale.Management.Infrastructure -> /app/BookSale.Management.Infrastructure/bin/Debug/net8.0/BookSale.Management.Infrastructure.dll
+  BookSale.Management.UI -> /app/BookSale.Management.UI/bin/Debug/net8.0/BookSale.Management.UI.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:10.94
