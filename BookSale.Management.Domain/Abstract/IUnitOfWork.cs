@@ -1,7 +1,6 @@
-﻿using BookSale.Management.DataAccess.Repository;
+using System.Threading.Tasks;
 using BookSale.Management.Domain.Abstract;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
+using BookSale.Management.DataAccess.Repository;
 
 namespace BookSale.Management.DataAccess.Abstract
 {
@@ -18,6 +17,6 @@ namespace BookSale.Management.DataAccess.Abstract
         Task CommitTransactionAsync();
         void Dispose();
         Task RollbackTransactionAsync();
-        DbSet<T> Table<T>() where T : class;
+        IRepository<T> Repository<T>() where T : class;
     }
 }

@@ -40,7 +40,7 @@ namespace BookSale.Management.Application.Services
                             IsActive = true
                         };
 
-                        await _unitOfWork.Table<CartDetail>().AddAsync(cartDetail);
+                        await _unitOfWork.Repository<CartDetail>().AddAsync(cartDetail);
                     }
                 }
 

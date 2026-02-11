@@ -60,7 +60,7 @@ namespace BookSale.Management.Application.Services
 
         public IEnumerable<GenreSiteDto> GetGenresListForSite()
         {
-            var result = _unitOfWork.Table<Genre>().Select(x => new GenreSiteDto
+            var result = _unitOfWork.Repository<Genre>().Query().Select(x => new GenreSiteDto
             {
                 Id = x.Id,
                 Name = x.Name,
