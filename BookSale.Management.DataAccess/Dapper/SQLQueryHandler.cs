@@ -14,7 +14,7 @@ namespace BookSale.Management.DataAccess.Dapper
             _connectionString = configuration.GetConnectionString("DefaultConnection") ?? string.Empty;
         }
 
-        public async Task ExecuteNonReturnAsync(string query, DynamicParameters parammeters = null,
+        public async Task ExecuteNonReturnAsync(string query, object parammeters = null,
                                                                             IDbTransaction dbTransaction = null)
         {
             using (var connection = new SqlConnection(_connectionString))
@@ -23,7 +23,7 @@ namespace BookSale.Management.DataAccess.Dapper
             }
         }
 
-        public async Task<T?> ExecuteReturnSingleValueScalarAsync<T>(string query, DynamicParameters parammeters = null,
+        public async Task<T?> ExecuteReturnSingleValueScalarAsync<T>(string query, object parammeters = null,
                                                                                 IDbTransaction dbTransaction = null)
         {
             using (var connection = new SqlConnection(_connectionString))
@@ -32,7 +32,7 @@ namespace BookSale.Management.DataAccess.Dapper
             }
         }
 
-        public async Task<T> ExecuteReturnSingleRowAsync<T>(string query, DynamicParameters parammeters = null,
+        public async Task<T> ExecuteReturnSingleRowAsync<T>(string query, object parammeters = null,
                                                                             IDbTransaction dbTransaction = null)
         {
             using (var connection = new SqlConnection(_connectionString))
@@ -41,7 +41,7 @@ namespace BookSale.Management.DataAccess.Dapper
             }
         }
 
-        public async Task<IEnumerable<T>> ExecuteStoreProdecureReturnListAsync<T>(string storeName, DynamicParameters parammeters = null,
+        public async Task<IEnumerable<T>> ExecuteStoreProdecureReturnListAsync<T>(string storeName, object parammeters = null,
                                                                                             IDbTransaction dbTransaction = null)
         {
             using (var connection = new SqlConnection(_connectionString))

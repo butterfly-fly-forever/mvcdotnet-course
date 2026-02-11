@@ -24,7 +24,7 @@ namespace BookSale.Management.DataAccess.Repository
             _sqLQueryHandler = sQLQueryHandler;
         }
 
-        public DbSet<T> Table<T>() where T: class => _applicationDbContext.Set<T>();
+        public IRepository<T> Repository<T>() where T : class => new Repository<T>(_applicationDbContext);
 
         public IBookRepository BookRepository => _bookRepository ??= new BookRepository(_applicationDbContext, _sqLQueryHandler);
         public IGenreRepository GenreRepository => _genreRepository ??= new GenreRepository(_applicationDbContext);

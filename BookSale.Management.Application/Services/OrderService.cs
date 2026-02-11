@@ -73,7 +73,7 @@ namespace BookSale.Management.Application.Services
                             UnitPrice = book.Price,
                         };
 
-                        await _unitOfWork.Table<OrderDetail>().AddAsync(orderDetail);
+                        await _unitOfWork.Repository<OrderDetail>().AddAsync(orderDetail);
                     }
 
                     await _unitOfWork.SaveChangeAsync();
@@ -94,13 +94,13 @@ namespace BookSale.Management.Application.Services
 
         public async Task<ReportOrderDto> GetReportByIdAsync(string id)
         {
-            var order = await _unitOfWork.Table<Order>()
+            var order = await _unitOfWork.Repository<Order>().Query()
                                          .Where(x => x.Id == id)
                                          .Include(x => x.UserAddress)
                                          .Include(x => x.Details)
                                          .SingleAsync();
 
-            var details = order.Details.Join(_unitOfWork.Table<Book>(), x => x.ProductId,
+            var details = order.Details.Join(_unitOfWork.Repository<Book>().Query(), x => x.ProductId,
                                                                         y => y.Id,
                                                                         (detail, book) => new OrderDetailDto
                                                                         {
